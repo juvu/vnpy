@@ -62,6 +62,8 @@ RUN    echo "开始配置系vnpy环境" \
     && mkdir ~/.pip \
     && echo "[global]" >> ~/.pip/pip.conf \
     && echo "index-url = https://pypi.doubanio.com/simple/" >> ~/.pip/pip.conf \
+    && echo "[install]" >> ~/.pip/pip.conf \
+    && echo "trusted-host = pypi.douban.com" >> ~/.pip/pip.conf \
     && echo "使用 pip 安装 python 库" \
     && pip install TA-Lib \
     && conda clean -ay \
